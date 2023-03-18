@@ -1,20 +1,28 @@
 const store = require("./app/store");
 const { counterActions } = require('./features/counter/counterSlice');
+const { dynamicCounterActions } = require('./features/dynamicCounter/dynamicCounterSlice');
 
 
 // Initial state
-console.log(`Initial State: ${JSON.stringify(store.getState())}`);
+// console.log(`Initial State: ${JSON.stringify(store.getState())}`);
 
 // subscribe to state changes
 store.subscribe(() => {
-    console.log(store.getState());
+    // console.log(store.getState());
 });
 
-const { increment, decrement } = counterActions;
+const { incrementCounter, decrementCounter } = counterActions;
+const { increment, decrement } = dynamicCounterActions;
 
 // disptach actions
-store.dispatch(increment());
+store.dispatch(incrementCounter());
 
-store.dispatch(increment());
+store.dispatch(incrementCounter());
 
-store.dispatch(decrement());
+store.dispatch(decrementCounter());
+
+store.dispatch(increment(5));
+
+store.dispatch(increment(10));
+
+store.dispatch(decrement(15));
