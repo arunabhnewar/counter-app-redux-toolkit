@@ -17,12 +17,12 @@ const { increment, decrement } = dynamicCounterActions;
 // disptach actions
 store.dispatch(incrementCounter());
 
-store.dispatch(incrementCounter());
+// store.dispatch(incrementCounter());
 
-store.dispatch(decrementCounter());
+// store.dispatch(decrementCounter());
 
-store.dispatch(increment(5));
+// store.dispatch(increment(5));
 
-store.dispatch(increment(10));
+// store.dispatch(increment(10));
 
-store.dispatch(decrement(15));
+// store.dispatch(decrement(15));
